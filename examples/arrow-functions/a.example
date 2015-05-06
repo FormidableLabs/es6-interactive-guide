@@ -1,0 +1,7 @@
+const a = 2;
+
+const multiply = function (num) {
+  return num * a;
+}.bind(this);
+
+console.log(multiply(3)) // outputs 6

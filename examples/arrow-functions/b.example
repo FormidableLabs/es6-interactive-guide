@@ -1,0 +1,5 @@
+const a = 2;
+
+const multiply = num => num * a;
+
+console.log(multiply(3)) // outputs 6
