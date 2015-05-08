@@ -1,6 +1,6 @@
 'use strict';
 
-import './guide.styl';
+import './styles/guide.styl';
 import 'component-playground/demo/styles/demo.css'
 import 'component-playground/demo/styles/syntax.css'
 import 'component-playground/demo/styles/codemirror.css'
