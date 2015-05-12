@@ -1,0 +1,9 @@
+const foo = function* (x) {
+  yield x;
+}
+
+const bar = foo(3);
+
+console.log(bar.next());
+
+console.log(bar.next());

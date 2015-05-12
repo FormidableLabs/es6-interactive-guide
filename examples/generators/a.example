@@ -1,0 +1,8 @@
+const foo = function* () {
+  console.log("foo");
+}
+
+// No console output here
+const bar = foo();
+
+// bar is now an instance of the generator and the console.log has never been run.

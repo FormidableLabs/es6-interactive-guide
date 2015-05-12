@@ -1,0 +1,11 @@
+const foo = function* (x) {
+  yield x + 1;
+  yield x + 2;
+  yield x + 3;
+
+  // Any return statement here would be ignored by the for..of loop
+}
+
+for (let y of foo(6)) {
+  console.log(y);
+}

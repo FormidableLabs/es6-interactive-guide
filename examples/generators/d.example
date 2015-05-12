@@ -1,0 +1,11 @@
+const foo = function* (x) {
+  const y = x + (yield x);
+
+  return y;
+}
+
+const bar = foo(5);
+
+console.log(bar.next().value) // outputs from 'yield x'
+
+console.log(bar.next(8).value) //outputs 'return y' of '<x=5> + <yield x=8>'

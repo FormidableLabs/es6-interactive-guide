@@ -1,0 +1,9 @@
+const foo = function* () {
+  console.log("foo");
+}
+
+// No console output here
+const bar = foo();
+
+// outputs "foo"
+bar.next();

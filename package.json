@@ -9,7 +9,7 @@
   "dependencies": {
     "babel-core": "^5.2.16",
     "babel-loader": "^5.0.0",
-    "component-playground": "^0.0.10",
+    "component-playground": "^0.0.11",
     "css-loader": "^0.12.0",
     "raw-loader": "^0.5.1",
     "react": "^0.13.2",
