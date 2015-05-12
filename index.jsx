@@ -7,38 +7,18 @@ import 'component-playground/demo/styles/codemirror.css';
 import 'babel-core/polyfill';
 
 import React from 'react/addons';
-import exampleList from './example-list';
+import Router from 'react-router';
+
+const DefaultRoute = Router.DefaultRoute;
+const RouterLink = Router.Link;
+const Route = Router.Route;
+const RouteHandler = Router.RouteHandler;
+
+import exampleListMap from './example-list';
 
 
-var Index = React.createClass({
+const Index = React.createClass({
   render() {
-    var navList = [];
-    var contentList = [];
-
-    exampleList.forEach(function (exampleObj, index) {
-      var link = exampleObj.name.replace(" ", "-").toLowerCase();
-
-      navList.push(
-        <li>
-          <a className={'guide-nav-link'} href={'#' + link}>
-            <span className={'guide-nav-item-reference'}>{index + 1}</span>
-            {exampleObj.name}
-          </a>
-        </li>
-      );
-
-      contentList.push(
-        <div>
-          <h2 className={'guide-heading'}>
-            <span className={'guide-heading-reference'}>{index + 1}</span>
-            {exampleObj.name}
-            <a href={'#' + link}>#</a>
-          </h2>
-          <exampleObj.example />
-        </div>
-      );
-    });
-
     return (
       <div>
         <header className={'guide-header guide-slider'}>
@@ -47,13 +27,22 @@ var Index = React.createClass({
           </div>
         </header>
         <div className={'guide-nav'}>
-          <ul className={'nav-list'} >
-            {navList}
+          <ul className={'nav-list'}>
+            {exampleListMap.map((exampleObj, index) => {
+              return (
+                <li>
+                  <RouterLink className={'guide-nav-link'} to={exampleObj.name.replace(" ", "-").toLowerCase()}>
+                    <span className={'guide-nav-item-reference'}>{index + 1}</span>
+                    {exampleObj.name}
+                  </RouterLink>
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className={'guide-content guide-slider'}>
           <div className={'container'}>
-            {contentList}
+            <RouteHandler />
           </div>
         </div>
       </div>
@@ -61,4 +50,38 @@ var Index = React.createClass({
   }
 });
 
-React.render(<Index/>, document.getElementById('root-component'));
+const exampleHandlers = exampleListMap.map((exampleObj, index) => {
+  return React.createClass({
+    displayName: exampleObj.name,
+    render() {
+      return (
+        <div>
+          <h2 className={'guide-heading'}>
+            <span className={'guide-heading-reference'}>{index + 1}</span>
+            {exampleObj.name}
+          </h2>
+          <exampleObj.example />
+        </div>
+      );
+    }
+  });
+});
+
+const routes = (
+  <Route name="index" path="/" handler={Index}>
+    {exampleHandlers.map((handler, i) => {
+      return (
+        <Route
+          key={i}
+          name={exampleListMap[i].name.replace(" ", "-").toLowerCase()}
+          handler={handler}>
+        </Route>
+      )
+    })}
+    <DefaultRoute handler={exampleHandlers[0]}/>
+  </Route>
+);
+
+Router.run(routes, function (Handler) {
+  React.render(<Handler/>, document.getElementById('root-component'));
+});
