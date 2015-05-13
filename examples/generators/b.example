@@ -1,9 +1,9 @@
 const foo = function* () {
-  console.log("foo");
+  console.log("here");
 }
 
 // No console output here
 const bar = foo();
 
-// outputs "foo"
+// outputs "here"
 bar.next();

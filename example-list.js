@@ -3,6 +3,7 @@ import ConciseMethods from "./examples/concise-methods/index.jsx";
 import Generators from "./examples/generators/index.jsx";
 import ObjectLiterals from "./examples/object-literals/index.jsx";
 import Destructuring from "./examples/destructuring/index.jsx";
+import SpreadOperator from "./examples/spread-operator/index.jsx";
 
 export default [{
   name: "Arrow functions",
@@ -19,4 +20,7 @@ export default [{
 }, {
   name: "Destructuring",
   example: Destructuring
+}, {
+  name: "Spread operator",
+  example: SpreadOperator
 }];
