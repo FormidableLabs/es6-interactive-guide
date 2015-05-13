@@ -1,0 +1,13 @@
+const foo = ["one", "two", "three"];
+
+const [a, b, c] = foo;
+
+console.log(a + b + c);
+
+const [x, ,z] = foo;
+
+console.log(x + z);
+
+const [, y] = foo;
+
+console.log(y);

@@ -1,0 +1,7 @@
+const foo = {a: [{b: "2"}, {c: ["3", "4"]}]};
+
+const {a: [{b: x}, {c: [y, z] }] } = foo;
+
+console.log(x)
+console.log(y)
+console.log(z)

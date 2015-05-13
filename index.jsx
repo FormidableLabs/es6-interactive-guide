@@ -31,7 +31,7 @@ const Index = React.createClass({
             {exampleListMap.map((exampleObj, index) => {
               return (
                 <li>
-                  <RouterLink className={'guide-nav-link'} to={exampleObj.name.replace(" ", "-").toLowerCase()}>
+                  <RouterLink className={'guide-nav-link'} to={exampleObj.name.replace(/\s+/g, "-").toLowerCase()}>
                     <span className={'guide-nav-item-reference'}>{index + 1}</span>
                     {exampleObj.name}
                   </RouterLink>
@@ -73,7 +73,7 @@ const routes = (
       return (
         <Route
           key={i}
-          name={exampleListMap[i].name.replace(" ", "-").toLowerCase()}
+          name={exampleListMap[i].name.replace(/\s+/g, "-").toLowerCase()}
           handler={handler}>
         </Route>
       )

@@ -1,0 +1,10 @@
+const foo = [1, 2, 3, 4, 5];
+
+const [a, b, ...cde] = foo;
+
+console.log(cde);
+
+// Can be used in other patterns
+const [w, , ...[, ,z]] = foo;
+
+console.log(z);

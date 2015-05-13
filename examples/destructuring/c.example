@@ -1,0 +1,17 @@
+let foo = {a: "1", b: "2", c: "3"};
+
+const computed = "d";
+
+foo[computed] = "4";
+
+// Destructure computed property
+const {[computed]: bar} = foo;
+
+console.log(bar);
+
+const baz = {w: {x: "5", y: "6"}};
+
+// Notice the overloaded ":" for nesting
+const {w: {x: z}} = baz;
+
+console.log(z);
