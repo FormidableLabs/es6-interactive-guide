@@ -1,0 +1,8 @@
+const numbers = [1, 2, 3, 4];
+const cubed = numbers.map(number => {
+  const squared = number * number;
+
+  return squared * number;
+});
+
+console.log(cubed);

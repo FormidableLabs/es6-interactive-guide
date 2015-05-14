@@ -3,6 +3,7 @@ import Playground from 'component-playground';
 import a from 'raw!./a.example';
 import b from 'raw!./b.example';
 import c from 'raw!./c.example';
+import d from 'raw!./d.example';
 import Code from '../../code.jsx';
 
 export default React.createClass({
@@ -22,10 +23,18 @@ export default React.createClass({
 
         <p>Arrow functions take the following form:
           <Code>{"(<arguments>) => <return statement>"}</Code>.
+        </p>
+
+        <p>
           When there is only a single argument, the parens are optional e.g.
-          <Code>{"(x) => x * x` and `x => x * x"}</Code>
+          <Code>{"(x) => x * x"}</Code> and <Code>{"x => x * x"}</Code>
            are both valid. When there are 0 or 2 or more arguments, parens are required. e.g.
-          <Code>{"() => 'zblah'` or `(x, y) => x * y"}</Code>
+          <Code>{"() => 'blah'"}</Code> or <Code>{"(x, y) => x * y"}</Code>
+        </p>
+
+        <p>
+          For multiline statements wrap the function body in curly braces:
+          <Playground codeText={d} es6Console={true} scope={{}} />
         </p>
       </div>
     );

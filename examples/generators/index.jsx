@@ -17,7 +17,7 @@ export default React.createClass({
           since we avoid function declarations in favor of function expressions.
         </p>
 
-        <p>Calling a generator doesn't actually run any of it's contents. A call to a generator returns a generator instance.</p>
+        <p>Calling a generator doesn{"'"}t actually run any of its contents. A call to a generator returns a generator instance.</p>
         <Playground codeText={a} es6Console={true} scope={{}} />
 
         <p>To use a generator instance we have to call <Code>.next()</Code></p>
@@ -54,24 +54,15 @@ export default React.createClass({
           Although they are easy to reason about for <Code>done: true</Code>, they {"don't"} show up in <Code>for..of</Code> loops. See below
         </p>
 
-        <p>Generators can be used with <Code>for..of</Code> loops for iterating to completion</p>
-        <Playground codeText={d} es6Console={true} scope={{}} />
+        <p>Generators can be used with <Code>for..of</Code> loops for iterating through all of the <Code>yield</Code> statements</p>
+        <Playground codeText={e} es6Console={true} scope={{}} />
 
         <p>
-          In the <Code>for..of</Code> the the variable <Code>Y</Code> is the result of the <Code>yield</Code> statements.
+          In the <Code>for..of</Code> the variable <Code>Y</Code> is the result of the <Code>yield</Code> statements.
           As mentioned above, any return statement will be ignored by the loop.
         </p>
 
         <p>For a more detailed overview of generators see <a href={"http://davidwalsh.name/es6-generators"}>{"http://davidwalsh.name/es6-generators"}</a></p>
-
-{/*
-
-        <p>Can be written as:</p>
-
-        <p>This is most useful for cases like map or reduce:</p>
-        <Playground codeText={c} es6Console={true} scope={{}} />
-
-        <h3>Arrow function syntax</h3>*/}
       </div>
     );
   }
