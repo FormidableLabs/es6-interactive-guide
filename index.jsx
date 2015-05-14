@@ -2,7 +2,6 @@
 
 import 'component-playground/demo/styles/syntax.css';
 import 'component-playground/demo/styles/codemirror.css';
-import 'babel-core/polyfill';
 
 import React from 'react/addons';
 import Router from 'react-router';

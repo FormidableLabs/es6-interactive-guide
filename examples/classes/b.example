@@ -1,0 +1,37 @@
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+
+  get color() {
+    return this.color;
+  }
+
+  set color(c) {
+    this.color = c;
+  }
+
+  // Read only property
+  get dimensions() {
+    return "height: " + this.height + ", width: " + this.width;
+  }
+
+  static area(rectangle) {
+    return rectangle.width * rectangle.height;
+  }
+}
+
+class Square extends Rectangle {
+  constructor(width) {
+    super(width, width);
+  }
+}
+
+const s = new Square(10);
+
+console.log(s.width);
+
+console.log(s.dimensions);
+
+console.log(Rectangle.area(s));

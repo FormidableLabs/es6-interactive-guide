@@ -1,0 +1,14 @@
+// class declaration
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+}
+
+// class expression (unnamed)
+var Square = class {
+  constructor(width) {
+    this.width = width;
+  }
+};
