@@ -142,7 +142,7 @@ export default React.createClass(Radium.wrap({
           style={[styles.link, styles.githubLink]}
           href='https://github.com/FormidableLabs/es6-interactive-guide'
         >
-          View Source on GitHub
+          Contribute on GitHub
         </a>
       </div>
     );
