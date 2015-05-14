@@ -24,7 +24,7 @@
     "lodash": "^3.8.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js",
+    "start": "webpack-dev-server",
     "build": "webpack --config webpack.config.minified.js"
   },
   "repository": {
