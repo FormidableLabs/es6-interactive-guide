@@ -38,7 +38,7 @@ const styles = {
   },
 
   link: {
-    fontFamily: 'kulturista-web',
+    fontFamily: 'kulturista-web, Georgia, Times New Roman, serif',
     color: '#d71920',
     textDecoration: 'none',
 
@@ -55,7 +55,7 @@ const styles = {
     fontSize: 12,
     position: 'relative',
     top: -1,
-    fontFamily: 'proxima-nova'
+    fontFamily: 'proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif',
   },
 
   githubLink: {
@@ -94,7 +94,7 @@ const logoStyles = {
   },
 
   text: {
-    fontFamily: 'kulturista-web',
+    fontFamily: 'kulturista-web, Georgia, Times New Roman, serif',
     fontWeight: 300,
     display: 'block'
   }

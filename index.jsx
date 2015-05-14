@@ -149,7 +149,7 @@ const Index = React.createClass(Radium.wrap({
 const headingStyles = {
   base: {
     fontSize: 24,
-    fontFamily: 'kulturista-web',
+    fontFamily: 'kulturista-web, Georgia, Times New Roman, serif',
     fontWeight: '300',
     marginBottom: 16,
     lineHeight: '1',
@@ -167,7 +167,7 @@ const headingStyles = {
     color: '#fff',
     borderRadius: '50%',
     marginRight: 12,
-    fontFamily: 'proxima-nova',
+    fontFamily: 'proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif',
     fontWeight: '700',
     height: 24,
     width: 24,

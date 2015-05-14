@@ -207,7 +207,7 @@
 	var headingStyles = {
 	  base: {
 	    fontSize: 24,
-	    fontFamily: 'kulturista-web',
+	    fontFamily: 'kulturista-web, Georgia, Times New Roman, serif',
 	    fontWeight: '300',
 	    marginBottom: 16,
 	    lineHeight: '1',
@@ -225,7 +225,7 @@
 	    color: '#fff',
 	    borderRadius: '50%',
 	    marginRight: 12,
-	    fontFamily: 'proxima-nova',
+	    fontFamily: 'proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif',
 	    fontWeight: '700',
 	    height: 24,
 	    width: 24,
@@ -525,7 +525,7 @@
 	  },
 
 	  link: {
-	    fontFamily: 'kulturista-web',
+	    fontFamily: 'kulturista-web, Georgia, Times New Roman, serif',
 	    color: '#d71920',
 	    textDecoration: 'none',
 
@@ -542,8 +542,7 @@
 	    fontSize: 12,
 	    position: 'relative',
 	    top: -1,
-	    fontFamily: 'proxima-nova'
-	  },
+	    fontFamily: 'proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif' },
 
 	  githubLink: {
 	    display: 'block',
@@ -581,7 +580,7 @@
 	  },
 
 	  text: {
-	    fontFamily: 'kulturista-web',
+	    fontFamily: 'kulturista-web, Georgia, Times New Roman, serif',
 	    fontWeight: 300,
 	    display: 'block'
 	  }
