@@ -41,10 +41,12 @@ const headerStyles = {
 
 const flexContainerStyles = {
   base: {
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '100vh',
-    paddingLeft: 300
+    '@media (min-width: 960px)': {
+      paddingLeft: 300,
+      display: 'flex',
+      flexDirection: 'column',
+      minHeight: '100vh',
+    }
   }
 };
 
@@ -70,6 +72,11 @@ const Index = React.createClass(Radium.wrap({
           {
             'h1, h2, h3, h4, h5, h6, p': {
               margin: 0
+            }
+          },
+          {
+            'img': {
+              maxWidth: '100%'
             }
           },
           {
@@ -141,11 +148,16 @@ const Index = React.createClass(Radium.wrap({
 
 const headingStyles = {
   base: {
-    fontSize: 36,
+    fontSize: 24,
     fontFamily: 'kulturista-web',
     fontWeight: '300',
     marginBottom: 16,
-    textAlign: 'center'
+    lineHeight: '1',
+
+    '@media (min-width: 500px)': {
+      textAlign: 'center',
+      fontSize: 36
+    }
   },
 
   counter: {
@@ -162,7 +174,11 @@ const headingStyles = {
     lineHeight: '26px',
     fontSize: 18,
     position: 'relative',
-    top: -6
+    top: -3,
+
+    '@media (min-width: 500px)': {
+      top: -6
+    }
   }
 };
 
@@ -173,7 +189,7 @@ const exampleHandlers = exampleListMap.map((exampleObj, index) => {
       return (
         <div className="Prose" key={index}>
           <h2 style={headingStyles.base}>
-            <span style={headingStyles.counter}>{index + 1}</span>
+            <span ref="counter" style={headingStyles.counter}>{index + 1}</span>
             {exampleObj.name}
           </h2>
           <exampleObj.example />

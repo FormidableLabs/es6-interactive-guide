@@ -8,19 +8,27 @@ const RouterLink = Router.Link;
 
 const styles = {
   base: {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    bottom: 0,
-    width: 300,
     padding: '36px',
-    background: '#F2F1F1'
+    background: '#F2F1F1',
+    overflow: 'auto',
+    WebkitOverflowScrolling: 'touch',
+    display: 'flex',
+    flexDirection: 'column',
+
+    '@media (min-width: 960px)': {
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      bottom: 0,
+      width: 300
+    }
   },
 
   list: {
     padding: 0,
     margin: 0,
-    listStyle: 'none'
+    listStyle: 'none',
+    flex: '1 0 auto'
   },
 
   siblingItem: {
@@ -48,6 +56,13 @@ const styles = {
     position: 'relative',
     top: -1,
     fontFamily: 'proxima-nova'
+  },
+
+  githubLink: {
+    display: 'block',
+    marginTop: 48,
+    textAlign: 'center',
+    flex: 'none'
   }
 };
 
@@ -55,7 +70,8 @@ const logoStyles = {
   base: {
     lineHeight: '1',
     textAlign: 'center',
-    marginBottom: 36
+    marginBottom: 36,
+    flex: 'none'
   },
 
   link: {
@@ -79,7 +95,8 @@ const logoStyles = {
 
   text: {
     fontFamily: 'kulturista-web',
-    fontWeight: 300
+    fontWeight: 300,
+    display: 'block'
   }
 }
 
@@ -119,6 +136,14 @@ export default React.createClass(Radium.wrap({
             );
           })}
         </ul>
+
+        <a
+          ref='githubLink'
+          style={[styles.link, styles.githubLink]}
+          href='https://github.com/FormidableLabs/es6-interactive-guide'
+        >
+          View Source on GitHub
+        </a>
       </div>
     );
   }
