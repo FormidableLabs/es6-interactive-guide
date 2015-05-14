@@ -17,13 +17,15 @@
     "react-router": "^0.13.3",
     "style-loader": "^0.12.2",
     "stylus-loader": "^1.1.0",
-    "webpack": "^1.8.11"
+    "webpack": "^1.8.11",
+    "webpack-dev-server": "^1.8.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "lodash": "^3.8.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch",
-    "build": "webpack"
+    "start": "webpack-dev-server --config webpack.config.js",
+    "build": "webpack --config webpack.config.minified.js"
   },
   "repository": {
     "type": "git",

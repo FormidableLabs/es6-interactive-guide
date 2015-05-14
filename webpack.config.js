@@ -9,6 +9,7 @@ module.exports = {
   },
   output: {
     path: 'assets',
+    publicPath: 'assets',
     filename: 'bundle.js'
   },
   module: {
@@ -19,9 +20,6 @@ module.exports = {
       }, {
         test: /\.css$/,
         loader: "style-loader!css-loader"
-      }, {
-        test: /\.styl$/,
-        loader: "style-loader!css-loader!stylus-loader"
       }
     ]
   },
