@@ -5,11 +5,11 @@ class Rectangle {
   }
 
   get color() {
-    return this.color;
+    return this._color;
   }
 
   set color(c) {
-    this.color = c;
+    this._color = c;
   }
 
   // Read only property
