@@ -22,7 +22,7 @@ export default React.createClass({
         <h3>Arrow function syntax</h3>
 
         <p>Arrow functions take the following form:
-          <Code>{"(<arguments>) => <return statement>"}</Code>.
+          <Code>{"(<arguments>) => <return expression>"}</Code>.
         </p>
 
         <p>
@@ -33,7 +33,7 @@ export default React.createClass({
         </p>
 
         <p>
-          For multiline statements wrap the function body in curly braces:
+          For functions consisting of more than one expression, wrap the function body in curly braces:
           <Playground codeText={d} es6Console={true} scope={{}} />
         </p>
       </div>
