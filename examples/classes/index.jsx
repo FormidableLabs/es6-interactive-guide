@@ -12,12 +12,12 @@ export default React.createClass({
         <p>
           Class syntax has been added to ES6.
           The underlying inheritance model is still prototypal but the class syntax can make it easier to reason about relationships.
-          To create a class just use the <Code>Class</Code> keyword. Classes can be created with class expressions or class declarations.
+          To create a class just use the <Code>class</Code> keyword. Classes can be created with class expressions or class declarations.
           Unlike function declarations, class declarations are not hoisted.
           <Playground codeText={a} es6Console={true} scope={{}} />
         </p>
         <p>
-          ES6 classes support <Code>Super</Code>, <Code>constructor</Code>, <Code>get</Code>, <Code>set</Code>, and <Code>static</Code> methods.
+          ES6 classes support <Code>super</Code>, <Code>constructor</Code>, <Code>get</Code>, <Code>set</Code>, and <Code>static</Code> methods.
           Inheritance is achieved with the <Code>extends</Code> keyword.
           <Playground codeText={b} es6Console={true} scope={{}} />
         </p>
