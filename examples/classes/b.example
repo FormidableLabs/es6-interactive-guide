@@ -14,7 +14,7 @@ class Rectangle {
 
   // Read only property
   get dimensions() {
-    return "height: " + this.height + ", width: " + this.width;
+    return `height: ${this.height}, width: ${this.width}`;
   }
 
   static area(rectangle) {
