@@ -35,14 +35,14 @@ export default React.createClass({
         </p>
 
         <p>
-          Arrays also supports the rest operator <Code>...</Code>.
+          Arrays also supports the `spread` operator <Code>...</Code>.
           This allows us to grab the remaining un-deconstructed subset of the array as an array.
           <Playground codeText={e} es6Console={true} scope={{}} />
           The rest operator looks identical to the spread operator but the two have different functions.
         </p>
 
         <p>
-          In ES7, objects also support the rest operator.
+          In ES7, objects also support the `spread` operator.
           This allows us to grab the remaining un-deconstructed properties of the object as an object.
           <Playground codeText={f} es6Console={true} scope={{}} />
         </p>
