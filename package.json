@@ -25,7 +25,8 @@
   },
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack --config webpack.config.minified.js"
+    "build": "webpack --config webpack.config.minified.js",
+    "deploy": "git checkout gh-pages && git reset --hard master && npm run build && git add assets/* && git commit -m 'update gh-pages' && git push --force"
   },
   "repository": {
     "type": "git",
